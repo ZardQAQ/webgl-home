@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIELD — Warehouse Bay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="webgl" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <p class="brand-mark">FIELD</p>
+      <nav class="nav" aria-label="主导航">
+        <a class="active" href="/">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#editor">Editor</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <aside class="caption">
+      <h1 class="headline">Warehouse Bay</h1>
+      <p class="lede">
+        按 W / A / S / D 开始操控小狐狸，拖动可转视角
+      </p>
+      <div class="palette-panel" aria-label="屏幕颜色">
+        <span class="palette-label">屏幕颜色</span>
+        <div class="palette-row" data-screen-palettes></div>
+      </div>
+    </aside>
+    <p class="hint" aria-hidden="true">Press WASD to take control · then drag to look</p>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
