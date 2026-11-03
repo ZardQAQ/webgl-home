@@ -20,6 +20,12 @@ npm run dev
 npm run build
 ```
 
-Upload `dist/` to any static host (Cloudflare Pages, GitHub Pages, Nginx, etc.).
+Upload `dist/` to any static host, or deploy to Cloudflare Workers static assets:
 
-Dependencies: `three` (MIT), `vite` (dev). Google Fonts are loaded from Google CDN in `index.html` — optional; remove the `<link>` tags if you want zero third-party requests.
+```powershell
+npm run deploy
+```
+
+Cloudflare CI: build `npm run build`, deploy `npx wrangler deploy`（仓库已含 `wrangler.jsonc`，指向 `dist/`）。
+
+Dependencies: `three` (MIT), `vite` / `wrangler` (dev). Google Fonts are loaded from Google CDN in `index.html` — optional; remove the `<link>` tags if you want zero third-party requests.
